@@ -1,0 +1,205 @@
+/* Iphone SE width 375px */
+@media screen and (max-width: 414px) {
+    /* Abous us */
+    #form_aboutUs{
+        min-width: 350px;
+    }
+    /* Register and login */
+    .form{
+        min-width: 350px;
+    }
+    /* Index */
+    #form_index{
+        min-width: 350px;
+    }
+    /* Main */
+    .div_container_items{
+        margin-top: 10%;
+        min-width: 355px;
+    }
+    #a_main{
+        font-size: 15px;
+    }
+    #welcome{
+        font-size: 18px;
+    }
+    /*header product name*/
+    .product_title_info_large,
+    .product_title_info_small,
+    .product_title_info_xsmall{
+        font-size: 17px;
+    }
+    /* Favourite and ads */
+    #form_fav{
+        min-width: 355px;
+    }
+    #div_container{
+        top: 29%;
+    }
+    /* View details */
+    #h2_view_details_fav{
+        font-size: 18px;
+    }
+    #h3_view_details_fav{
+        font-size: 16px;
+    }
+}
+/* Iphone SE width 375px */
+@media screen and (max-width: 360px) {
+    /* Abous us */
+    #form_aboutUs{
+        min-width: 335px;
+    }
+    /* Register and login */
+    .form{
+        min-width: 335px;
+    }
+    /* Index */
+    #form_index{
+        min-width: 335px;
+    }
+    /* Main */
+    .div_container_items{
+        margin-top: 10%;
+        min-width: 310px;
+    }
+    #a_main{
+        font-size: 15px;
+    }
+    #welcome{
+        font-size: 14px;
+    }
+    /*header product name*/
+    .product_title_info_large,
+    .product_title_info_small,
+    .product_title_info_xsmall{
+        font-size: 17px;
+    }
+    /* Favourite and ads */
+    #form_fav{
+        min-width: 335px;
+    }
+    #div_container{
+        top: 29%;
+    }
+    /* View details */
+    #h2_view_details_fav{
+        font-size: 18px;
+    }
+    #h3_view_details_fav{
+        font-size: 16px;
+    }
+}
+/* Iphone SE width 375px */
+@media screen and (max-width: 300px) {
+    /* Abous us */
+    #form_aboutUs{
+        min-width: 335px;
+    }
+    /* Register and login */
+    .form{
+        min-width: 335px;
+    }
+    /* Index */
+    #form_index{
+        min-width: 335px;
+    }
+    /* Main */
+    .div_container_items{
+        margin-top: 10%;
+        min-width: 270px;
+    }
+    #a_main{
+        font-size: 15px;
+    }
+    #welcome{
+        font-size: 14px;
+    }
+    /*header product name*/
+    .product_title_info_large,
+    .product_title_info_small,
+    .product_title_info_xsmall{
+        font-size: 17px;
+    }
+    /* Favourite and ads */
+    #form_fav{
+        min-width: 335px;
+    }
+    #div_container{
+        top: 29%;
+    }
+    /* View details */
+    #h2_view_details_fav{
+        font-size: 18px;
+    }
+    #h3_view_details_fav{
+        font-size: 16px;
+    }
+}
+
+/* Iphone SE width 375px */
+@media screen and (min-width: 768px) {
+    /* Abous us */
+    #form_aboutUs{
+        min-width: 700px;
+    }
+    /* Register and login */
+    .form{
+        min-width: 700px;
+    }
+    /* Index */
+    #form_index{
+        min-width: 700px;
+    }
+    /*header product name*/
+    .product_title_info_large,
+    .product_title_info_small,
+    .product_title_info_xsmall{
+        font-size: 25px;
+    }
+    /* Favourite and ads */
+    #form_fav{
+        min-width: 700px;
+    }    
+}
+
+
+
+/* Height */
+@media screen and (max-height: 667px) {
+    /* Abous us */
+    #form_aboutUs{
+        max-height: 80%;
+    }
+    /* Register and login */
+    .form{
+        max-height: 80%;
+    }
+    /* Index */
+    #form_index{
+        max-height: 80%;
+    }
+    /* Main */
+    .div_container_items{
+        max-height: 75%;
+    }
+}
+/* Height */
+@media screen and (min-height: 667px) {
+    /* Abous us */
+    #form_aboutUs{
+        max-height: 80%;
+    }
+    /* Register and login */
+    .form{
+        max-height: 80%;
+    }
+    /* Index */
+    #form_index{
+        max-height: 80%;
+    }
+    /* Main */
+    .div_container_items{
+        max-height: 75%;
+    }
+}

@@ -46,17 +46,15 @@
                 <div class="col_div">
                     <div class="col">
                         <span id="span_aboutUs2" style="font-size: 22px;">
-                            Welcome to shopping website,<br>Your number one source for all things (shoes, bags and all products).<br>
-                            We're dedicated to giving you the very best of product, with a focus on dependability, customer service and uniqueness.<br>
-                            Founded in 2022 by Bahaa yassine & Tarek youness, shopping website has come a long way from its beginnings.<br>
-                            When Bahaa yassine & Tarek youness first started out his passion for helping people to find<br>
-                            their requirements easily drove him to do intense research and gave him the impetus to turn hard work<br>
+                            Welcome to shopping website,<br>Your number one source for all things (Cars, Home furniture,Home electronic, Apartment ...).<br>
+                            Founded in 2022 by Bahaa yassine,<br>
+                            When Bahaa yassine first started out his passion for helping people to find
+                            their requirements easily drove him to do intense research and gave him the impetus to turn hard work 
                             and inspiration into to a booming online store. We now serve customers all over Lebanon.<br>
-                            We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions<br>
-                            or comments, please don't hesitate to contact us.
+                            We hope you enjoy our website as much as we enjoy offering them to you.
                         </span>
                     </div>
-                </div>  
+                </div> 
                 
             </form>
         </section>

@@ -60,10 +60,10 @@ function unfav(product_name,id){
             if(obj.resultat_update >0){
                 $("#td_"+product_name+"_"+id).fadeOut(500,function(){
                     if(obj.check_all_tr > 0){
-                        //if(obj.check_item == 0){
-                            $("#table_body").append(obj.row);
-                        //}
+                        $("#table_body").empty();
+                        $("#table_body").append(obj.row);
                     }else{
+                        $("#table_body").empty();
                         $("#table_body").append(obj.row);
                     }
                 });

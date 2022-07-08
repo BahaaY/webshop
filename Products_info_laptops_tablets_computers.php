@@ -81,7 +81,6 @@
                         <i class="fa fa-money" ></i>
                         <input type="text" name="input_price_lb" id="input_price_lb" value="<?php if(isset($_POST['input_price_lb'])) echo $input_price_lb ?>" >
                         <label id="label_price_lb">Price in LB</label>
-                        <span id="required" style="position: absolute;right:0px;top:2px;font-size:20px">*</span>
                     </div>
                     <div class="col">
                         <i class="fa fa-dollar" ></i>

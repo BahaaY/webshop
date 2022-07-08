@@ -33,53 +33,6 @@
 
     ?>
 
-    <script>
-        //display images
-        /*let fileInput = document.getElementById("input_image");
-        let imageContainer = document.getElementById("div_image");
-        let numOfFiles = document.getElementById("num_image");
-
-        function preview(){
-            imageContainer.innerHTML = "";
-            numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
-
-            for(i of fileInput.files){
-                let reader = new FileReader();
-                let figure = document.createElement("figure");
-                let figCap = document.createElement("figcaption");
-                figCap.innerText = i.name;
-                figure.appendChild(figCap);
-                reader.onload=()=>{
-                    let img = document.createElement("img");
-                    img.setAttribute("src",reader.result);
-                    figure.insertBefore(img,figCap);
-                }
-                imageContainer.appendChild(figure);
-                reader.readAsDataURL(i);
-            }
-        }*/
-        /*document.querySelector("#input_image").addEventListener("click", (e) => { //CHANGE EVENT FOR UPLOADING PHOTOS
-        if (window.File && window.FileReader && window.FileList && window.Blob) { //CHECK IF FILE API IS SUPPORTED
-            const files = e.target.files; //FILE LIST OBJECT CONTAINING UPLOADED FILES
-            const output = document.querySelector("#div_image");
-            output.innerHTML = "";
-            for (let i = 0; i < files.length; i++) { // LOOP THROUGH THE FILE LIST OBJECT
-                if (!files[i].type.match("image")) continue; // ONLY PHOTOS (SKIP CURRENT ITERATION IF NOT A PHOTO)
-                const picReader = new FileReader(); // RETRIEVE DATA URI 
-                picReader.addEventListener("load", function (event) { // LOAD EVENT FOR DISPLAYING PHOTOS
-                const picFile = event.target;
-                const div = document.createElement("div");
-                div.innerHTML = `<img class="thumbnail" src="${picFile.result}" title="${picFile.name}"/>`;
-                output.appendChild(div);
-                });
-                picReader.readAsDataURL(files[i]); //READ THE IMAGE
-            }
-        } else {
-            alert("Your browser does not support File API");
-        }
-        });*/
-    </script>
-
     <body class="body_main">
         <!-- Header -->
         <section class="header">
@@ -122,15 +75,6 @@
                         <?php if($msg_image!="") echo $msg_image ?>
                     </div>
                 </div>
-
-                <!--<div class="col_div">
-                    <div class="col">
-                        <p id="num_image">No Files Chosen</p>
-                        <div id="div_image">
-
-                        </div>
-                    </div>
-                </div> -->
 
                 <div class="col_div">
                     <div class="col">

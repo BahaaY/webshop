@@ -649,7 +649,7 @@ h1,h3{
 
 /* Favourites */
 .td_fav{
-    width: 40%;
+    width: 50%;
     text-align: center;
     background-color: black;
     transition: all 200ms ease-in-out;

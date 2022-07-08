@@ -142,26 +142,14 @@ function remove(product,id){
         processData: false,
         success:function(output){
             var obj = JSON.parse(output);   
-            /*if(obj.status==1){
-                if(obj.check_tr==1){
-                    $("#td_"+product+"_"+id).hide(500,function(){
-                        if(obj.check_all_tr==0){
-                            $("#tr_no_item_in_sell").show(200);
-                        }
-                    });
-                }else{
-                    $("#tr_"+product).hide(500,function(){
-                        if(obj.check_all_tr==0){
-                            $("#tr_no_item_in_sell").show(200);
-                        }
-                    });
-                }                
-            }*/
             if(selected_item=="null"){
                 if(obj.status==1){
                     $("#td_"+product+"_"+id).hide(500,function(){     
                         if(obj.check_all_tr==0){
                             $("#tr_no_item_in_sell").show(200);
+                        }else{
+                            $("#table_body").empty();
+                            $("#table_body").append(obj.row);
                         }
                     });
                 }
@@ -175,11 +163,13 @@ function remove(product,id){
                                 $("#table_body").empty();
                                 $("#table_body").append(obj.row);
                             }
-                        } 
+                        }else{
+                            $("#table_body").empty();
+                            $("#table_body").append(obj.row);
+                        }
                     });
                 }
             }
-            
         }
     });
 }

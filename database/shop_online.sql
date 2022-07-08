@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 26, 2022 at 04:53 PM
+-- Generation Time: Jul 08, 2022 at 02:55 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.5
 
@@ -52,11 +52,14 @@ CREATE TABLE `image` (
 --
 
 INSERT INTO `image` (`ID`, `id_product`, `img`, `product`) VALUES
-(728, 98, 'home_furniture-1656087470_98.jpg', 'product_laptop_tablet_computer'),
-(741, 80, 'background_image-1656250007_80.jpg', 'product_land'),
-(742, 80, 'background_image_main-1656250007_80.jpg', 'product_land'),
-(743, 80, 'background_image_main_2-1656250007_80.jpg', 'product_land'),
-(744, 100, 'home_furniture-1656250323_100.jpg', 'product_laptop_tablet_computer');
+(795, 134, 'home_furniture-1657283732_134.jpg', 'product_laptop_tablet_computer'),
+(796, 135, 'home_furniture-1657283753_135.jpg', 'product_laptop_tablet_computer'),
+(797, 135, 'vehicles_motorcycles-1657283753_135.jpg', 'product_laptop_tablet_computer'),
+(801, 82, 'apartments-1657283798_82.jpg', 'product_vehicle_motorcycle'),
+(802, 82, 'background_image-1657283798_82.jpg', 'product_vehicle_motorcycle'),
+(803, 82, 'background_image_main-1657283798_82.jpg', 'product_vehicle_motorcycle'),
+(804, 37, 'apartments-1657283836_37.jpg', 'product_apartment'),
+(805, 14, 'home_furniture-1657283911_14.jpg', 'product_electronic_home');
 
 -- --------------------------------------------------------
 
@@ -447,6 +450,13 @@ CREATE TABLE `product_apartment` (
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `product_apartment`
+--
+
+INSERT INTO `product_apartment` (`ID`, `unique_id`, `price_lb`, `price_usd`, `title`, `description`, `type`, `payment`, `bedroom_nb`, `bethroom_nb`, `floor_nb`, `cond`, `size`, `location`) VALUES
+(37, 1215009111, 72000000, 4000, 'Big apartment', 'full option', 'Apartment', 'Cash', '3', '2', '2', 'Under construction', 200, 'Bourjein, El choud, Lebanon1');
+
 -- --------------------------------------------------------
 
 --
@@ -464,6 +474,13 @@ CREATE TABLE `product_electronic_home` (
   `cond` varchar(30) NOT NULL,
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `product_electronic_home`
+--
+
+INSERT INTO `product_electronic_home` (`ID`, `unique_id`, `price_lb`, `price_usd`, `title`, `description`, `type`, `cond`, `location`) VALUES
+(14, 1215009111, 72000000, 3000, 'hnhnhn', 'hnhnhn', 'Coffee machines', 'Used', 'Bourjein, El choud, Lebanon');
 
 -- --------------------------------------------------------
 
@@ -501,13 +518,6 @@ CREATE TABLE `product_land` (
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Dumping data for table `product_land`
---
-
-INSERT INTO `product_land` (`ID`, `unique_id`, `price_lb`, `price_usd`, `title`, `description`, `type`, `size`, `location`) VALUES
-(80, 1215009111, 72000000, 72000000, 'Big land', 'nice', 'Industrial', 200, 'Bourjein, El choud, Lebanon');
-
 -- --------------------------------------------------------
 
 --
@@ -531,8 +541,8 @@ CREATE TABLE `product_laptop_tablet_computer` (
 --
 
 INSERT INTO `product_laptop_tablet_computer` (`ID`, `unique_id`, `price_lb`, `price_usd`, `title`, `description`, `type`, `cond`, `location`) VALUES
-(98, 1215009111, 72000000, 3000, 'Bmw M3', 'full option', 'Razer', 'New', 'Bourjein, El choud, Lebanon'),
-(100, 1215009111, 72000000, 3000, 'Bmw M3', 'full option', 'Samsung', 'New', 'Bourjein, El choud, Lebanon');
+(134, 1215009111, 72000000, 3000, 'harman', 'liek new', 'Toshiba', 'New', 'Bourjein, El choud, Lebanon'),
+(135, 1215009111, 72000000, 72000000, 'kardon', 'full option', 'Samsung', 'Used', 'Bourjein, El choud, Lebanon');
 
 -- --------------------------------------------------------
 
@@ -558,6 +568,13 @@ CREATE TABLE `product_vehicle_motorcycle` (
   `location` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `product_vehicle_motorcycle`
+--
+
+INSERT INTO `product_vehicle_motorcycle` (`ID`, `unique_id`, `price_lb`, `price_usd`, `title`, `description`, `make`, `model`, `cond`, `year`, `kilometere`, `trans`, `color`, `body`, `location`) VALUES
+(82, 1215009111, '72000000', '3000', 'Bmw M3', 'full option', 'BMW', 'M3', 'Used', 2014, '30000 to 39999', 'Steptronic', 'Black', 'Coupe & Sport', 'Bourjein, El choud, Lebanon1');
+
 -- --------------------------------------------------------
 
 --
@@ -576,18 +593,16 @@ CREATE TABLE `users` (
   `birthdate` date NOT NULL,
   `gender` varchar(10) NOT NULL,
   `verify_code` varchar(255) NOT NULL,
-  `verify` int(1) NOT NULL DEFAULT 0,
-  `blocked` int(1) NOT NULL DEFAULT 0
+  `verify` int(1) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`ID`, `unique_id`, `first_name`, `last_name`, `username`, `email`, `password`, `phone`, `birthdate`, `gender`, `verify_code`, `verify`, `blocked`) VALUES
-(39, 274895780, 'Bahaa', 'Yassine', 'bahaa_y', 'bahaayassin92@gmail.com', '$2y$10$xJScNVG8kOu9jzI3hMNUpessbrdnfimLaBvxShWNG3fD21rDH8eWu', 71683784, '2001-07-10', 'Male', '452d62e06924aced229bd4334c50c5c9', 1, 0),
-(41, 1215009111, 'Bahaa', 'Yassine', 'bahaa_yy', 'bahaayassine3@gmail.com', '$2y$10$blY9/iG2iBDEyBigN0wY9u5kGnCgSYerhLMvQf7kg5jdj7WJKd4Z2', 71683783, '2002-07-10', 'Male', '12c0b27e7b45f1b05638eb602a1721d1', 1, 0),
-(44, 1927846109, 'Unknown', 'Unknown', 'Unknown', 'admin@gmail.com', '$2y$10$vMfAArh/SbI0Wc1xWVK.juL1G4.A9CfBYFLVlSdDsdvfD7Vq38pi2', 0, '0000-00-00', 'Unknown', '0', 1, 0);
+INSERT INTO `users` (`ID`, `unique_id`, `first_name`, `last_name`, `username`, `email`, `password`, `phone`, `birthdate`, `gender`, `verify_code`, `verify`) VALUES
+(39, 274895780, 'Bahaa', 'Yassine', 'bahaa_y', 'bahaayassin92@gmail.com', '$2y$10$oE48tCmEewq4QyL4bakxN..QL9JlMrsCSkKJmz3s47oonMAfNwlO6', 71683784, '2001-07-10', 'Male', '551902f3371034c4c836c5b775ce7c48', 1),
+(41, 1215009111, 'Bahaa', 'Yassine', 'bahaa_yy', 'bahaayassine3@gmail.com', '$2y$10$YyA6p21INZqxP01nhoolA.Be89wsstOBHs3LhMpTN8R5MZ1p5C1lW', 71683783, '2002-07-10', 'Male', '3d38a49d9fbdbf7f384231fe57712a7b', 1);
 
 --
 -- Indexes for dumped tables
@@ -667,13 +682,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `favourite`
 --
 ALTER TABLE `favourite`
-  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `ID` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=162;
 
 --
 -- AUTO_INCREMENT for table `image`
 --
 ALTER TABLE `image`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=745;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=806;
 
 --
 -- AUTO_INCREMENT for table `make`
@@ -691,43 +706,43 @@ ALTER TABLE `model`
 -- AUTO_INCREMENT for table `product_apartment`
 --
 ALTER TABLE `product_apartment`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `product_electronic_home`
 --
 ALTER TABLE `product_electronic_home`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `product_home_furniture`
 --
 ALTER TABLE `product_home_furniture`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `product_land`
 --
 ALTER TABLE `product_land`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- AUTO_INCREMENT for table `product_laptop_tablet_computer`
 --
 ALTER TABLE `product_laptop_tablet_computer`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=136;
 
 --
 -- AUTO_INCREMENT for table `product_vehicle_motorcycle`
 --
 ALTER TABLE `product_vehicle_motorcycle`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=82;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

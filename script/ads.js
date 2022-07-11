@@ -2,16 +2,16 @@ function count_img_ads(product_name_id){
     array = product_name_id.split("/");
     product = array[0];
     id = array[1];
-    var files=$("#input_image_"+product+"_"+id)[0].files;
+    var files=$("#input_image")[0].files;
     if(files.length==1){
-        $("#num_image_"+product+"_"+id).empty();
-        $("#num_image_"+product+"_"+id).append(files.length+ " image chosen.");
+        $("#num_image").empty();
+        $("#num_image").append(files.length+ " image chosen.");
     }else if(files.length >7){
-        $("#num_image_"+product+"_"+id).empty();
-        $("#num_image_"+product+"_"+id).append("<span style='color:rgb(255, 52, 52);'>You can only select 7 images.</span>");
+        $("#num_image").empty();
+        $("#num_image").append("<span style='color:rgb(255, 52, 52);'>You can only select 7 images.</span>");
     }else{
-        $("#num_image_"+product+"_"+id).empty();
-        $("#num_image_"+product+"_"+id).append(files.length+ " images chosen.");
+        $("#num_image").empty();
+        $("#num_image").append(files.length+ " images chosen.");
     }
 }
 
@@ -20,42 +20,42 @@ function update(product,id){
     formData.append('check_button','update');
     if(product=="product_vehicle_motorcycle"){
         p="product_vehicle_motorcycle";
-        var totalfiles = $("#input_image_"+product+"_"+id)[0].files.length;
+        var totalfiles = $("#input_image")[0].files.length;
         for (var index = 0; index < totalfiles; index++) {
-            formData.append("img[]", $("#input_image_"+product+"_"+id)[0].files[index]);
+            formData.append("img[]", $("#input_image")[0].files[index]);
         }
         formData.append('product',p);
         formData.append('id',id);
-        formData.append('price_lb',$("#input_price_lb_"+p+"_"+id).val());
-        formData.append('price_usd', $("#input_price_usd_"+p+"_"+id).val());
-        formData.append('title',$("#input_title_"+p+"_"+id).val());
-        formData.append('description',$("#input_description_"+p+"_"+id).val());
-        formData.append('location',$("#input_location_"+p+"_"+id).val());
-        formData.append('condition',$("#condition_"+p+"_"+id+" option:selected").text());
-        formData.append('year',$("#year_"+p+"_"+id+" option:selected").text());
-        formData.append('kilometeres',$("#kilometeres_"+p+"_"+id+" option:selected").text());
-        formData.append('transmission',$("#transmission_"+p+"_"+id+" option:selected").text());
-        formData.append('color',$("#color_"+p+"_"+id+" option:selected").text());
-        formData.append('body',$("#body_"+p+"_"+id+" option:selected").text());
+        formData.append('price_lb',$("#input_price_lb").val());
+        formData.append('price_usd', $("#input_price_usd").val());
+        formData.append('title',$("#input_title").val());
+        formData.append('description',$("#input_description").val());
+        formData.append('location',$("#input_location").val());
+        formData.append('condition',$("#condition option:selected").text());
+        formData.append('year',$("#year option:selected").text());
+        formData.append('kilometeres',$("#kilometeres option:selected").text());
+        formData.append('transmission',$("#transmission option:selected").text());
+        formData.append('color',$("#color option:selected").text());
+        formData.append('body',$("#body option:selected").text());
     }else if(product=="product_apartment"){
         p="product_apartment";
-        var totalfiles = $("#input_image_"+product+"_"+id)[0].files.length;
+        var totalfiles = $("#input_image")[0].files.length;
         for (var index = 0; index < totalfiles; index++) {
-            formData.append("img[]", $("#input_image_"+product+"_"+id)[0].files[index]);
+            formData.append("img[]", $("#input_image")[0].files[index]);
         }
         formData.append('product',p);
         formData.append('id',id);
-        formData.append('price_lb',$("#input_price_lb_"+p+"_"+id).val());
-        formData.append('price_usd', $("#input_price_usd_"+p+"_"+id).val());
-        formData.append('title',$("#input_title_"+p+"_"+id).val());
-        formData.append('description',$("#input_description_"+p+"_"+id).val());
-        formData.append('location',$("#input_location_"+p+"_"+id).val());
-        formData.append('condition',$("#condition_"+p+"_"+id+" option:selected").text());
-        formData.append('size',$("#input_size_"+p+"_"+id).val());
-        formData.append('bedroom_nb',$("#bedroom_nb_"+p+"_"+id+" option:selected").text());
-        formData.append('bethroom_nb',$("#bethroom_nb_"+p+"_"+id+" option:selected").text());
-        formData.append('floor_nb',$("#floor_nb_"+p+"_"+id+" option:selected").text());
-        formData.append('payment',$("#payment_"+p+"_"+id+" option:selected").text());
+        formData.append('price_lb',$("#input_price_lb").val());
+        formData.append('price_usd', $("#input_price_usd").val());
+        formData.append('title',$("#input_title").val());
+        formData.append('description',$("#input_description").val());
+        formData.append('location',$("#input_location").val());
+        formData.append('condition',$("#condition option:selected").text());
+        formData.append('size',$("#input_size").val());
+        formData.append('bedroom_nb',$("#bedroom_nb option:selected").text());
+        formData.append('bethroom_nb',$("#bethroom_nb option:selected").text());
+        formData.append('floor_nb',$("#floor_nb option:selected").text());
+        formData.append('payment',$("#payment option:selected").text());
     }else if(product=="product_electronic_home" || product=="product_home_furniture" || product=="product_laptop_tablet_computer"){
         if(product=="product_electronic_home"){
             p="product_electronic_home";
@@ -64,32 +64,32 @@ function update(product,id){
         }else if(product=="product_laptop_tablet_computer"){
             p="product_laptop_tablet_computer";
         }
-        var totalfiles = $("#input_image_"+product+"_"+id)[0].files.length;
+        var totalfiles = $("#input_image")[0].files.length;
         for (var index = 0; index < totalfiles; index++) {
-            formData.append("img[]", $("#input_image_"+product+"_"+id)[0].files[index]);
+            formData.append("img[]", $("#input_image")[0].files[index]);
         }
         formData.append('product',p);
         formData.append('id',id);
-        formData.append('price_lb',$("#input_price_lb_"+p+"_"+id).val());
-        formData.append('price_usd', $("#input_price_usd_"+p+"_"+id).val());
-        formData.append('title',$("#input_title_"+p+"_"+id).val());
-        formData.append('description',$("#input_description_"+p+"_"+id).val());
-        formData.append('location',$("#input_location_"+p+"_"+id).val());
-        formData.append('condition',$("#condition_"+p+"_"+id+" option:selected").text());
+        formData.append('price_lb',$("#input_price_lb").val());
+        formData.append('price_usd', $("#input_price_usd").val());
+        formData.append('title',$("#input_title").val());
+        formData.append('description',$("#input_description").val());
+        formData.append('location',$("#input_location").val());
+        formData.append('condition',$("#condition option:selected").text());
     }else if(product=="product_land"){
         p="product_land";
-        var totalfiles = $("#input_image_"+product+"_"+id)[0].files.length;
+        var totalfiles = $("#input_image")[0].files.length;
         for (var index = 0; index < totalfiles; index++) {
-            formData.append("img[]", $("#input_image_"+product+"_"+id)[0].files[index]);
+            formData.append("img[]", $("#input_image")[0].files[index]);
         }
         formData.append('product',p);
         formData.append('id',id);
-        formData.append('price_lb',$("#input_price_lb_"+p+"_"+id).val());
-        formData.append('price_usd', $("#input_price_usd_"+p+"_"+id).val());
-        formData.append('title',$("#input_title_"+p+"_"+id).val());
-        formData.append('description',$("#input_description_"+p+"_"+id).val());
-        formData.append('location',$("#input_location_"+p+"_"+id).val());
-        formData.append('size',$("#input_size_"+p+"_"+id).val());
+        formData.append('price_lb',$("#input_price_lb").val());
+        formData.append('price_usd', $("#input_price_usd").val());
+        formData.append('title',$("#input_title").val());
+        formData.append('description',$("#input_description").val());
+        formData.append('location',$("#input_location").val());
+        formData.append('size',$("#input_size").val());
     }
     $.ajax({
         url:"php_ajax/update_remove_ads.php",
@@ -99,30 +99,30 @@ function update(product,id){
         processData: false,
         success:function(output){
             var obj = JSON.parse(output);
-            $("#div_error_price_lb_"+product+"_"+id).html("");
-            $("#div_error_price_usd_"+product+"_"+id).html("");
-            $("#div_error_title_"+product+"_"+id).html("");
-            $("#div_error_description_"+product+"_"+id).html("");
-            $("#div_error_location_"+product+"_"+id).html("");
-            $("#div_error_size_"+product+"_"+id).html("");
+            $("#div_error_price_lb").html("");
+            $("#div_error_price_usd").html("");
+            $("#div_error_title").html("");
+            $("#div_error_description").html("");
+            $("#div_error_location").html("");
+            $("#div_error_size").html("");
 
-            $("#div_error_price_lb_"+product+"_"+id).append(obj.error_price_lb);
-            $("#div_error_price_usd_"+product+"_"+id).append(obj.error_price_usd);
-            $("#div_error_title_"+product+"_"+id).append(obj.error_title);
-            $("#div_error_description_"+product+"_"+id).append(obj.error_description);
-            $("#div_error_location_"+product+"_"+id).append(obj.error_location);
-            $("#div_error_size_"+product+"_"+id).append(obj.error_size);
+            $("#div_error_price_lb").append(obj.error_price_lb);
+            $("#div_error_price_usd").append(obj.error_price_usd);
+            $("#div_error_title").append(obj.error_title);
+            $("#div_error_description").append(obj.error_description);
+            $("#div_error_location").append(obj.error_location);
+            $("#div_error_size").append(obj.error_size);
             if(obj.status == 1){
                 if(obj.check_img==1){
-                    $("#img_"+product+"_"+id).empty();
-                    $("#img_"+product+"_"+id).html(obj.row_img); 
+                    $("#img").empty();
+                    $("#img").html(obj.row_img); 
                 }
                 alert("Product updated successfully.");
             }else if(obj.status == 0){
                 alert("Please make change to update product.");
             }
-            $("#input_image_"+product+"_"+id).val('');
-            $("#num_image_"+product+"_"+id).html('No image chosen. ');
+            $("#input_image").val('');
+            $("#num_image").html('No image chosen. ');
         }
     });  
 }

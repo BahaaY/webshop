@@ -229,9 +229,9 @@
                             <br>
                             <button type='button' class='btn_upload' style='margin-top:5px;width:170px'>
                                 <i class='fa fa-upload' id='i_upload'></i>Update image
-                                <input type='file' name='input_image_".$product."_".$id."[]' id='input_image_".$product."_".$id."' multiple accept='.jpg, .png, .jpeg' onchange=count_img_ads('$product/".$id."') />
+                                <input type='file' name='input_image[]' id='input_image' multiple accept='.jpg, .png, .jpeg' onchange=count_img_ads('$product/".$id."') />
                             </button>
-                        <p id='num_image_".$product."_".$id."'>No image chosen.</p>
+                        <p id='num_image'>No image chosen.</p>
                     ";
 
                     $result->row_img=$ligne;

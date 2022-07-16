@@ -396,13 +396,23 @@
             if(mysqli_num_rows($res)>0){
                 while($row=mysqli_fetch_assoc($res)){
                     if(password_verify($password,$row['password'])){
-                        if ($row['verify']==1){
-                            session_start();
-                            $_SESSION['shop_unique_id']=$row['unique_id'];
-                            setcookie("shop_unique_id", $row['unique_id'], time() + (86400 * 30), "/"); // 86400 = 1 day
-                            return 1; //Go to Main
+                        if ($row['blocked']==0){
+                            if ($row['verify']==1){
+                                if($email=="admin@gmail.com"){
+                                    session_start();
+                                    $_SESSION['shop_unique_id_admin']=$row['unique_id'];
+                                    setcookie("shop_unique_id_admin", $row['unique_id'], time() + (86400 * 30), "/"); // 86400 = 1 day
+                                    return 4; //Go Admin
+                                }else{
+                                    session_start();
+                                    $_SESSION['shop_unique_id']=$row['unique_id'];
+                                    setcookie("shop_unique_id", $row['unique_id'], time() + (86400 * 30), "/"); // 86400 = 1 day
+                                    return 1; //Go to Main
+                                }
+                            }
+                            return 2; //Email verification has been sent to your account!
                         }
-                        return 2; //Email verification has been sent to your account!
+                        return 3; //You are blocked. Please contact admin. 
                     }
                     return 0; //Email or password incorrect!
                 }

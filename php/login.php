@@ -86,7 +86,19 @@
                 $mail->send();
     
                 $msg_check_validation="<h2 id='msg_check_correct'>Email verification has been sent to your account.</h2>";
-            } 
+            
+            }else if($login==3){
+                $msg_check_validation="<h2 id='msg_check_incorrect'>You are blocked. Please contact admin.</h2>";
+            }else if($login==4){
+                if(isset($_POST['remember'])){
+                    setcookie("shopping_website_email", $input_email, time() + (86400 * 30), "/"); // 86400 = 1 day
+                    setcookie("shopping_website_password", $input_password, time() + (86400 * 30), "/"); // 86400 = 1 day
+                }else{
+                    setcookie('shopping_website_email', '', time() - 3600, '/');
+                    setcookie('shopping_website_password', '', time() - 3600, '/');
+                }
+                header("location:Admin/Admin.php");
+            }
 
         }  
         

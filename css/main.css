@@ -57,7 +57,6 @@ body {
 
 /* Form page register*/
 
-
 .form {
     position: absolute;
     padding: 10px;
@@ -811,4 +810,16 @@ h1,h3{
     background-color:skyblue;
     border-radius:10px;
     margin-bottom:5px
+}
+
+
+/* Admin */
+
+#tr_tbody{
+    background-color: black;
+}
+#table_admin{
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
 }

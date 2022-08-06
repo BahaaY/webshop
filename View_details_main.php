@@ -910,7 +910,7 @@
                     <section class='header'>
             
                         <div class='col'>
-                            <a href='Favourite.php' id='left'>Back</a>
+                            <a href='Main.php' id='left'>Back</a>
                         </div>
             
                         <div class='col'>

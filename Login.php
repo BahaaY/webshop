@@ -9,6 +9,9 @@
         if (isset($_SESSION['shop_unique_id']) || isset($_COOKIE['shop_unique_id'])) {
             header("location: Main.php");
         }
+        if (isset($_SESSION['shop_unique_id_admin']) || isset($_COOKIE['shop_unique_id_admin'])) {
+            header("location: Admin/Admin.php");
+        }
 
         $checked="";
         if(isset($_COOKIE['shopping_website_email']) && isset($_COOKIE['shopping_website_email'])){

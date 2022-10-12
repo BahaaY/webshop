@@ -50,10 +50,6 @@
                     <div class="col">
                         <span id="span_aboutUs2" style="font-size: 22px;">
                             Welcome to shopping website,<br>Your number one source for all things (Cars, Home furniture,Home electronic, Apartment, Land ...).<br>
-                            Founded in 2022 by Bahaa yassine,<br>
-                            When Bahaa yassine first started out his passion for helping people to find
-                            their requirements easily drove him to do intense research and gave him the impetus to turn hard work 
-                            and inspiration into to a booming online store. We now serve customers all over Lebanon.<br>
                             We hope you enjoy our website as much as we enjoy offering them to you.
                         </span>
                     </div>

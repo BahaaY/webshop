@@ -31,7 +31,7 @@
             </div>
 
             <div class="col">
-                <a href="Login.php" id="a_main">Login</a>
+                <a href="Login.php" id="a_main">Loginn</a>
             </div>
 
         </section>
